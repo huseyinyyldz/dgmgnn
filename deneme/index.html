@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Doğum Günün Kutlu Olsun Aşkım 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-polaroids">
+                <div class="loading-polaroid">
+                    <div class="polaroid-photo">
+                        <span>📷</span>
+                        <p>Birlikte</p>
+                    </div>
+                    <div class="polaroid-text">💕</div>
+                </div>
+                <div class="loading-polaroid">
+                    <div class="polaroid-photo">
+                        <span>🤍</span>
+                        <p>Aşkımız</p>
+                    </div>
+                    <div class="polaroid-text">🌹</div>
+                </div>
+            </div>
+            
+            <div class="loading-hearts">
+                <div class="loading-heart">💕</div>
+                <div class="loading-heart">🤍</div>
+                <div class="loading-heart">🌹</div>
+            </div>
+            <h2 class="loading-title">Doğum Günün Kutlu Olsun</h2>
+            <div class="loading-roses">🤍🌹🤍🌹🤍🌹🤍</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Ömrüm için özel anlar yükleniyor 💖</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Floating Hearts -->
+        <div class="floating-hearts">
+            <span class="heart">💖</span>
+            <span class="heart">💕</span>
+            <span class="heart">💗</span>
+            <span class="heart">💝</span>
+            <span class="heart">🌹</span>
+            <span class="heart">🌷</span>
+        </div>
+
+        <!-- Main Content -->
+        <header class="main-header">
+            <h1 class="title">🎉 Doğum Günün Kutlu Olsun! 🎉</h1>
+            <p class="subtitle">En sevdiğim insan, bugün senin günün ✨</p>
+        </header>
+
+        <main class="content">
+                        <!-- Simple Music Control -->
+            <div class="simple-music-control">
+                <audio id="backgroundMusic" loop>
+                    <source src="love-song.mp3" type="audio/mpeg">
+                </audio>
+                
+                <button class="mini-music-btn" id="playPauseBtn" onclick="toggleMusic()" title="Müzik Oynat/Durdur">
+                    <span id="playIcon">🎵</span>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="love-menu">
+                <div class="mobile-navigation-hint">
+                    <span class="hint-text">👆 Bölümleri keşfetmek için menüye dokun! 💕</span>
+                </div>
+                
+                <div class="menu-item" onclick="showSection('cake-section')">
+                    🎂 <span>Doğum Günü</span>
+                </div>
+                <div class="menu-item" onclick="showSection('love-message')">
+                    💕 <span>Aşk Mektubum</span>
+                </div>
+                <div class="menu-item" onclick="showSection('flower-garden')">
+                    🌸 <span>Çiçek Bahçem</span>
+                </div>
+                <div class="menu-item" onclick="showSection('interactive-hearts')">
+                    💖 <span>Kalp Oyunu</span>
+                </div>
+                <div class="menu-item" onclick="showSection('photo-gallery')">
+                    📸 <span>Fotoğraflarımız</span>
+                </div>
+ 
+                <div class="menu-item" onclick="showSection('sweet-words')">
+                    🥰 <span>Sana Olan Hislerim</span>
+                </div>
+                <div class="menu-item" onclick="showSection('surprise-section')">
+                    🎁 <span>Sürprizim</span>
+                </div>
+            </nav>
+            
+
+
+            <!-- Birthday Cake Section -->
+            <section class="section-content cake-section" id="cake-section" style="display: none;">
+                <div class="section-header">
+                    <h2>🎂 Doğum Günün Kutlu Olsun Ömrüm! 🎂</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                <div class="birthday-celebration">
+                    <div class="cake-container">
+                        <div class="cake">
+                            <!-- Cake Decorations -->
+                            <div class="cake-sparkles">
+                                <span class="sparkle">✨</span>
+                                <span class="sparkle">✨</span>
+                                <span class="sparkle">✨</span>
+                                <span class="sparkle">✨</span>
+                            </div>
+                            
+                            <!-- Cake Layers -->
+                            <div class="cake-layer cake-bottom">
+                                <div class="frosting-decoration">🌹</div>
+                                <div class="frosting-decoration">🤍</div>
+                                <div class="frosting-decoration">🌹</div>
+                            </div>
+                            <div class="cake-layer cake-middle">
+                                <div class="cream-swirl">🍰</div>
+                                <div class="cream-swirl">🍰</div>
+                            </div>
+                            <div class="cake-layer cake-top">
+                                <div class="top-decoration">💕</div>
+                            </div>
+                            
+                            <!-- Enhanced Candles -->
+                            <div class="candles">
+                                <div class="candle pink"><div class="flame"></div></div>
+                                <div class="candle white"><div class="flame"></div></div>
+                                <div class="candle pink"><div class="flame"></div></div>
+                                <div class="candle white"><div class="flame"></div></div>
+                                <div class="candle pink"><div class="flame"></div></div>
+                            </div>
+                            
+                            <!-- Strawberries -->
+                            <div class="strawberries">
+                                <span class="strawberry">🍓</span>
+                                <span class="strawberry">🍓</span>
+                                <span class="strawberry">🍓</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Cake Plate -->
+                        <div class="cake-plate"></div>
+                    </div>
+                    
+                    <!-- Birthday Message -->
+                    <div class="birthday-wish">
+                        <p class="main-wish">🎂 Bugün senin günün güzelim! 🎂</p>
+                        <p class="blow-candles" onclick="blowCandles()">💨 Dileğini tut ve mumları üfle! 💨</p>
+                        <div class="wish-hearts">💕🌹💕🌹💕</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Love Message Section -->
+            <section class="section-content love-message" id="love-message" style="display: none;">
+                <div class="message-card">
+                    <h2>💕 Sana Olan Sevgim Busem 💕</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                    
+                    <p>Sen benim hayatımın en güzel çiçeğisin ömrüm, tıpkı sevdiğin beyaz güller ve laleler gibi saf ve güzel. Her gün yanımda olduğun için kendimi şanslı hissediyorum.</p>
+                    
+                    <div class="flowers-decoration">
+                        <span class="flower">🤍</span>
+                        <span class="flower">🌹</span>
+                        <span class="flower">🤍</span>
+                        <span class="flower">🌷</span>
+                        <span class="flower">🤍</span>
+                        <span class="flower">🌹</span>
+                        <span class="flower">🤍</span>
+                    </div>
+                    
+                    <p>Bugün senin doğum günün hayatım ve ben senin mutluluğun için varım. Hayallerinin gerçek olması, gülüşünün hiç eksik olmaması dileğiyle...</p>
+                    
+                    <div class="love-words">
+                        <span class="love-word">Güzelim</span>
+                        <span class="love-word">Ömrüm</span>
+                        <span class="love-word">Busem</span>
+                        <span class="love-word">Hayatım</span>
+                    </div>
+                    
+                    <h3>🎈 Seni Sonsuzca Seviyorum! 🎈</h3>
+                </div>
+            </section>
+
+            <!-- Sweet Words Section -->
+            <section class="section-content sweet-words" id="sweet-words" style="display: none;">
+                <div class="section-header">
+                    <h2>🥰 Sana Olan Hislerim 🥰</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                
+                <div class="sweet-words-grid">
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Seni Ne Kadar Seviyorum</h3>
+                        <p>Sen benim dünyamın güneşisin ömrüm. Gülüşün kalbimi ısıtıyor, sesini duymak en büyük mutluluğum. Seninle geçirdiğim her an bir rüya gibi.</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                    
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Seni Düşündüğümde</h3>
+                        <p>Busem, seni düşündüğümde içimde kelebekler uçuşuyor. Gözlerin en güzel manzara, gülüşün en tatlı melodi. Sen benim kalbimdeki en güzel duygu.</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                    
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Yanımda Olmak</h3>
+                        <p>Güzelim, yanımda olduğun her an kendimi şanslı hissediyorum. Senin varlığın bana huzur veriyor, kokun beni sarhoş ediyor. Sen benim sevgi dolu yuvamdın.</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                    
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Geleceğimiz</h3>
+                        <p>Hayatım, seninle paylaştığım her anı çok değerli. Birlikte yaşadığımız güzel anıları hatırladığımda gülümsüyorum. Daha nice güzel günlere birlikte!</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                    
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Seni Hissettiğimde</h3>
+                        <p>Kalbin atışlarını duyduğumda, elinin sıcaklığını hissettiğimde dünya duruyor sanki. Sen benim en güvenli limanım, en sevdiğim eve dönüş.</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                    
+                    <div class="sweet-card" onclick="animateCard(this)">
+                        <h3>Sonsuz Aşkım</h3>
+                        <p>Sen benim kalbimin tek sahibisin. Seni sevmek en doğal halim, seni düşünmek en sevdiğim şey. Bu aşk sonsuz, sen çok özelsin benim için.</p>
+                        <div class="card-roses">🤍🌹🤍</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flower Garden Section -->
+            <section class="section-content flower-garden" id="flower-garden" style="display: none;">
+                <div class="section-header">
+                    <h2>🌸 Senin İçin Çiçek Bahçesi 🌸</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                <div class="garden">
+                    <div class="flower-pot" onclick="waterFlower(this)">
+                        <div class="pot"></div>
+                        <div class="stem"></div>
+                        <div class="rose">🤍</div>
+                    </div>
+                    <div class="flower-pot" onclick="waterFlower(this)">
+                        <div class="pot"></div>
+                        <div class="stem"></div>
+                        <div class="tulip">🌷</div>
+                    </div>
+                    <div class="flower-pot" onclick="waterFlower(this)">
+                        <div class="pot"></div>
+                        <div class="stem"></div>
+                        <div class="rose">🌹</div>
+                    </div>
+                    <div class="flower-pot" onclick="waterFlower(this)">
+                        <div class="pot"></div>
+                        <div class="stem"></div>
+                        <div class="tulip">🌷</div>
+                    </div>
+                </div>
+                <div class="flower-love-message">
+                    <p>🌸 Hiçbir çiçek senden güzel değil ömrüm 🌸</p>
+                </div>
+                
+                <div class="interaction-guide">
+                    <div class="guide-text">🌺 Çiçeklere Tıkla ve Sula! 💧</div>
+                    <div class="guide-animation">👆 ✨ 🌱</div>
+                </div>
+            </section>
+
+            <!-- Interactive Hearts Section -->
+            <section class="section-content interactive-hearts" id="interactive-hearts" style="display: none;">
+                <div class="section-header">
+                    <h2>💖 Kalp Oyunu 💖</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                
+                <div class="hearts-playground">
+                    <div class="heart-button" onclick="triggerHeartSurprise(this, 'love')">💕</div>
+                    <div class="heart-button" onclick="triggerHeartSurprise(this, 'soul')">💖</div>
+                    <div class="heart-button" onclick="triggerHeartSurprise(this, 'beautiful')">💗</div>
+                    <div class="heart-button" onclick="triggerHeartSurprise(this, 'life')">💝</div>
+                </div>
+                
+                <div class="interaction-guide">
+                    <div class="guide-text">💕 Kalplere Dokun, Kalbim Senin Olsun! ✨</div>
+                    <div class="guide-animation">👆 💖 💌</div>
+                </div>
+            </section>
+
+            <!-- Photo Gallery Section -->
+            <section class="section-content photo-gallery" id="photo-gallery" style="display: none;">
+                <div class="section-header">
+                    <h2>📸 Fotoğraflarımız 📸</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                
+                <div class="photo-grid">
+                    <div class="photo-frame polaroid" onclick="showPhotoDetails(this)">
+                        <div class="photo-placeholder">
+                            <span>📷</span>
+                            <p>Fotoğrafını buraya ekle</p>
+                        </div>
+                        <div class="photo-caption">İlk tanışmamız 💕</div>
+                    </div>
+                    
+                    <div class="photo-frame polaroid" onclick="showPhotoDetails(this)">
+                        <div class="photo-placeholder">
+                            <span>📷</span>
+                            <p>Fotoğrafını buraya ekle</p>
+                        </div>
+                        <div class="photo-caption">İlk çıkışımız 🌟</div>
+                    </div>
+                    
+                    <div class="photo-frame polaroid" onclick="showPhotoDetails(this)">
+                        <div class="photo-placeholder">
+                            <span>📷</span>
+                            <p>Fotoğrafını buraya ekle</p>
+                        </div>
+                        <div class="photo-caption">En mutlu anımız 😊</div>
+                    </div>
+                    
+                    <div class="photo-frame polaroid" onclick="showPhotoDetails(this)">
+                        <div class="photo-placeholder">
+                            <span>📷</span>
+                            <p>Fotoğrafını buraya ekle</p>
+                        </div>
+                        <div class="photo-caption">Birlikte yolculuk 🚗</div>
+                    </div>
+                </div>
+                
+                <div class="interaction-guide">
+                    <div class="guide-text">📷 Daha Nice Fotoğraflarımıza ve Anılarımıza Hep Beraber! 💫</div>
+                    <div class="guide-animation">👆 ✨ 💕</div>
+                </div>
+            </section>
+
+
+            <!-- Interactive Surprise Button -->
+            <section class="section-content surprise-section" id="surprise-section" style="display: none;">
+                <div class="section-header">
+                    <h2>🎁 Özel Sürprizim 🎁</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                </div>
+                <button class="surprise-btn" onclick="showSurprise()">
+                    🎁 Sürprizi Aç Ömrüm! 🎁
+                </button>
+                <div class="surprise-message" id="surprise">
+                    <h2>✨ Kalbimdeki En Derin Duygular ✨</h2>
+                    <div class="white-roses">
+                        🤍🌹🤍🌹🤍🌹🤍🌹🤍
+                    </div>
+                    
+                    <div class="surprise-photo">
+                        <div class="photo-placeholder">
+                            <span>📷</span>
+                            <p>En güzel fotoğrafımızı buraya ekle</p>
+                        </div>
+                        <div class="photo-caption">Bizim en özel anımız 💕</div>
+                    </div>
+                    
+                    <p><strong>En sevdiğim insan,</strong> bu dünyada seni bulmuş olmak hayatımın en büyük hediyesi. Kalbin kadar güzel ruhu olan, gözleri ışıl ışıl parlayan tek kişi sensin. Her sabah seni gördüğümde hayata tekrar aşık oluyorum.</p>
+                    
+                    <p><strong>Canım Busem,</strong> senin doğum günün sadece bir gün değil, benim için hayatımın en güzel kutlaması. Çünkü bu gün sen dünyaya geldin ve benim dünyam aydınlandı. Gülüşün karanlık günlerimi aydınlatıyor, varlığın bana umut veriyor.</p>
+                    
+                    <p><strong>Sevgili ömrüm,</strong> seni ne kadar sevdiğimi kelimelerle anlatmak mümkün değil. Kalbimdeki bu aşk okyanus kadar derin, gökyüzü kadar sonsuz. Her nefes aldığımda seni düşünüyorum, her kalp atışımda senin ismini söylüyorum.</p>
+                    
+                    <p><strong>Güzelim hayatım,</strong> daha nice doğum günlerini birlikte kutlayacağız inşallah. Yaşlanırken bile el ele, gülüşlerle dolu günler geçireceğiz. Sen benim sonsuz aşkım, en değerli hazinemsin. Seni çok ama çok seviyorum! 💕</p>
+                    
+                    <div class="special-roses">
+                        🤍🌹💕🌹🤍🌹💕🌹🤍
+                    </div>
+                    
+                    <div class="confetti">🎊🎉🎊🎉🎊</div>
+                </div>
+            </section>
+
+            <!-- Footer with Love Notes -->
+            <footer class="love-footer">
+                <div class="love-notes">
+                    <span class="note">💝 Her gün seni daha çok seviyorum</span>
+                    <span class="note">🌹 Sen benim gülüm</span>
+                    <span class="note">🌷 Sen benim çiçeğim</span>
+                    <span class="note">💕 Sonsuza kadar senin</span>
+                    <span class="note">💕 Sen beğim Güzelimsinn</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Background Decorations -->
+    <div class="bg-decorations">
+        <div class="bg-flower">🌹</div>
+        <div class="bg-flower">🌷</div>
+        <div class="bg-flower">🌸</div>
+        <div class="bg-flower">💐</div>
+        <div class="bg-flower">🌹</div>
+        <div class="bg-flower">🌷</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
+</html> 
