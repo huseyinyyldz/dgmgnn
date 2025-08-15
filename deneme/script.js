@@ -62,7 +62,8 @@ function showSection(sectionId) {
             'flower-garden': "🌸 Çiçek Bahçesi",
             'interactive-hearts': "💖 Sevgi Kelimelerim",
             'photo-gallery': "📸 Fotoğraf Galerimiz",
-            'surprise-section': "🎁 Özel Sürpriz"
+            'surprise-section': "🎁 Özel Sürpriz",
+            'heart-section': "❤️ Kalbimin Sahibi"
         };
         
         if (notifications[sectionId]) {
@@ -88,6 +89,12 @@ function showSection(sectionId) {
             setTimeout(() => {
                 animatePhotos();
             }, 700);
+        } else if (sectionId === 'heart-section') {
+            setTimeout(() => {
+                // Create automatic heart animation when section opens
+                createRandomHeart();
+                showSubtleNotification("💖 Kalbe dokun ve aşkımı hisset!");
+            }, 1000);
         }
     }
 }
@@ -1348,4 +1355,95 @@ function animateHeartButtons() {
             }, 800);
         }, index * 150);
     });
+}
+
+// Animate Heart function for the big heart section
+function animateHeart(heartElement) {
+    // Add animated class for explosion effect
+    heartElement.classList.add('animated');
+    
+    // Create heart explosion effect
+    createHeartExplosion(heartElement);
+    
+    // Show romantic message
+    setTimeout(() => {
+        const loveMessages = [
+            "💖 Kalbim sadece senin için atıyor Busem! Sen benim en büyük aşkımsın ve her gün seni daha çok seviyorum. 💖",
+            "❤️ Sen benim hayatımın anlamısın ömrüm! Seninle geçirdiğim her an çok değerli. İyi ki varsın! ❤️",
+            "💕 Bu kalp sana ait sevgilim! Her vuruşu senin adını söylüyor. Sonsuzca seviyorum seni! 💕",
+            "💗 Sen benim ruh eşimsin Busem! Kalbimin yarısı sende, diğer yarısı da senin için atıyor. 💗"
+        ];
+        const randomMessage = loveMessages[Math.floor(Math.random() * loveMessages.length)];
+        createFloatingMessage(randomMessage, 4000);
+    }, 300);
+    
+    // Show notification
+    showSubtleNotification("💖 Kalp sana aşkımı gönderdi!");
+    
+    // Remove animated class after animation
+    setTimeout(() => {
+        heartElement.classList.remove('animated');
+    }, 800);
+}
+
+// Create heart explosion effect
+function createHeartExplosion(element) {
+    const rect = element.getBoundingClientRect();
+    const heartEmojis = ['💕', '💖', '💗', '💝', '❤️', '🧡', '💛', '💚', '💙', '💜'];
+    
+    for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+            const heart = document.createElement('div');
+            heart.innerHTML = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            heart.style.position = 'fixed';
+            heart.style.left = (rect.left + rect.width/2) + 'px';
+            heart.style.top = (rect.top + rect.height/2) + 'px';
+            heart.style.fontSize = (Math.random() * 15 + 20) + 'px';
+            heart.style.zIndex = '1000';
+            heart.style.pointerEvents = 'none';
+            
+            // Calculate random direction for explosion
+            const angle = (i / 15) * 360 + (Math.random() * 30 - 15); // Add some randomness
+            const distance = 100 + Math.random() * 100;
+            const x = Math.cos(angle * Math.PI / 180) * distance;
+            const y = Math.sin(angle * Math.PI / 180) * distance;
+            
+            heart.style.animation = `heartSlideIn 2s ease-out forwards`;
+            heart.style.setProperty('--x', x + 'px');
+            heart.style.setProperty('--y', y + 'px');
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, 2000);
+        }, i * 50);
+    }
+    
+    // Create sparkle effects too
+    setTimeout(() => {
+        for (let j = 0; j < 8; j++) {
+            setTimeout(() => {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = (rect.left + rect.width/2 + Math.random() * 80 - 40) + 'px';
+                sparkle.style.top = (rect.top + rect.height/2 + Math.random() * 80 - 40) + 'px';
+                sparkle.style.fontSize = '20px';
+                sparkle.style.zIndex = '1000';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.animation = 'magicalFloat 1.5s ease-out forwards';
+                
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    if (sparkle.parentNode) {
+                        sparkle.parentNode.removeChild(sparkle);
+                    }
+                }, 1500);
+            }, j * 100);
+        }
+    }, 200);
 } 
